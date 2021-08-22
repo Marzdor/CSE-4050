@@ -20,59 +20,59 @@
   padding: 2px 11px;
 }
 
-.BasicButton-Disabled {
+.BasicButtonDisabled {
   background-color: #999999 !important;
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-.BasicButton-Disabled:hover {
+.BasicButtonDisabled:hover {
   padding: 6px 15px !important;
   border: none !important;
 }
 
-.BasicButton-Disabled:active {
+.BasicButtonDisabled:active {
   padding: 6px 15px;
 }
 
-.BasicButton-Primary {
+.BasicButtonPrimary {
   background-color: var(--Primary);
 }
 
-.BasicButton-Primary:hover {
+.BasicButtonPrimary:hover {
   border: 2px solid var(--Primary);
 }
 
-.BasicButton-Info {
+.BasicButtonInfo {
   background-color: var(--Info);
 }
 
-.BasicButton-Info:hover {
+.BasicButtonInfo:hover {
   border: 2px solid var(--Info);
 }
-.BasicButton-Success {
+.BasicButtonSuccess {
   background-color: var(--Success);
 }
 
-.BasicButton-Success:hover {
+.BasicButtonSuccess:hover {
   border: 2px solid var(--Success);
 }
-.BasicButton-Warning {
+.BasicButtonWarning {
   background-color: var(--Warning);
 }
 
-.BasicButton-Warning:hover {
+.BasicButtonWarning:hover {
   border: 2px solid var(--Warning);
 }
-.BasicButton-Danger {
+.BasicButtonDanger {
   background-color: var(--Danger);
 }
 
-.BasicButton-Danger:hover {
+.BasicButtonDanger:hover {
   border: 2px solid var(--Danger);
 }
 
-.BasicButton-Text {
+.BasicButtonText {
   font-weight: 500;
   letter-spacing: 0;
   margin: 0;
