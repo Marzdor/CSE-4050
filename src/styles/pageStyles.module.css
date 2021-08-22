@@ -1,0 +1,14 @@
+.BasicPage-MainContainer {
+  align-items: center;
+  background-color: var(--Shade-Dark);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  width: 100vw;
+}
+
+.MainPage-Title {
+  color: #ffffff;
+  font-size: 2rem;
+}
