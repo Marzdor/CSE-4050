@@ -1,0 +1,18 @@
+.UserInfo-Container {
+  border-radius: 4px;
+  background-color: var(--Info);
+  height: 800px;
+  width: 800px;
+  padding: 20px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.UserInfo-DisplayContainer {
+  width: 80%;
+  height: 90%;
+  border: 1px solid var(--Accent-Light);
+  overflow-y: auto;
+}

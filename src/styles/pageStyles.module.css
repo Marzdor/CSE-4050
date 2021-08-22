@@ -8,7 +8,12 @@
   width: 100vw;
 }
 
-.MainPage-Title {
+.MainPage-ButtonContainer {
+  display: flex;
+  max-width: 400px;
+}
+
+.Page-Title {
   color: #ffffff;
   font-size: 2rem;
 }
