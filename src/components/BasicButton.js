@@ -7,13 +7,14 @@ const BasicButton = ({
   onClick = () => console.log("Default Button Click"),
   buttonStyle,
   style = {},
+  disabled = false,
   ...props
 }) => {
   return (
     <div
-      className={getButtonStyle(buttonStyle)}
+      className={getButtonStyle({ buttonStyle, disabled })}
       style={style}
-      onClick={onClick}
+      onClick={!disabled ? onClick : null}
     >
       <p className={styles["BasicButton-Text"]}>{text}</p>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import BasicButton from "../BasicButton";
 import buttonStyles from "../../enums/buttonStyles";
+import { convertJsonToString } from "../../helperFunctions/JsonHelper";
 import { fetchRandomUser } from "../../helperFunctions/AxiosHelper";
 import styles from "../../styles/apiAssignmentStyles.module.css";
 
@@ -21,7 +22,7 @@ const UserInfoContainer = () => {
       <div className={styles["UserInfo-DisplayContainer"]}>
         <div>
           <p>
-            <pre>{JSON.stringify(userInfo, null, 2)}</pre>
+            <pre>{convertJsonToString(userInfo)}</pre>
           </p>
         </div>
       </div>

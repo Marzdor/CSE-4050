@@ -1,10 +1,10 @@
 import buttonStyles from "../enums/buttonStyles";
 import styles from "../styles/buttonStyles.module.css";
 
-export const getButtonStyle = (style) => {
+export const getButtonStyle = ({ buttonStyle, disabled }) => {
   const classNames = [styles["BasicButton"]];
 
-  switch (style) {
+  switch (buttonStyle) {
     case buttonStyles.PRIMARY:
       classNames.push(styles["BasicButton-Primary"]);
       break;
@@ -22,9 +22,11 @@ export const getButtonStyle = (style) => {
       break;
 
     default:
-      console.warn("[getButtonStyle][default] Style: ", style);
+      console.warn("[getButtonStyle][default] Style: ", buttonStyle);
       break;
   }
+
+  if (disabled) classNames.push(styles["BasicButton-Disabled"]);
 
   return classNames.join(" ");
 };

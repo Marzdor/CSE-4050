@@ -20,6 +20,21 @@
   padding: 2px 11px;
 }
 
+.BasicButton-Disabled {
+  background-color: #999999 !important;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.BasicButton-Disabled:hover {
+  padding: 6px 15px !important;
+  border: none !important;
+}
+
+.BasicButton-Disabled:active {
+  padding: 6px 15px;
+}
+
 .BasicButton-Primary {
   background-color: var(--Primary);
 }
