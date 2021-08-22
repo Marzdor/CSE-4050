@@ -21,9 +21,9 @@ const UserInfoContainer = () => {
     <div className={styles["UserInfo-Container"]}>
       <div className={styles["UserInfo-DisplayContainer"]}>
         <div>
-          <p>
-            <pre>{convertJsonToString(userInfo)}</pre>
-          </p>
+          <pre>
+            <p>{convertJsonToString(userInfo)}</p>
+          </pre>
         </div>
       </div>
       <BasicButton
