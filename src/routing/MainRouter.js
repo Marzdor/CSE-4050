@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 
 import ApiAssignmentPage from "../pages/ApiAssignmentPage";
 import JsonAssignmentPage from "../pages/JsonAssignmentPage";
