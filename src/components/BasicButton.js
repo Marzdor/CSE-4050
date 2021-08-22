@@ -1,5 +1,4 @@
 import React from "react";
-import buttonStyles from "../enums/buttonStyles";
 import { getButtonStyle } from "../helperFunctions/BasicButtonHelper";
 import styles from "../styles/buttonStyles.module.css";
 
@@ -12,7 +11,7 @@ const BasicButton = ({
 }) => {
   return (
     <div
-      className={getButtonStyle(buttonStyles)}
+      className={getButtonStyle(buttonStyle)}
       style={style}
       onClick={onClick}
     >
