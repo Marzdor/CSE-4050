@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import BasicButton from "../BasicButton";
+import { apiAssignmentStyles } from "../../styles/styles";
 import buttonStyles from "../../enums/buttonStyles";
-import { convertJsonToString } from "../../helperFunctions/JsonHelper";
-import { fetchRandomUser } from "../../helperFunctions/AxiosHelper";
-import styles from "../../styles/apiAssignmentStyles.module.css";
+import { convertJsonToString } from "../../helperFunctions/jsonHelper";
+import { fetchRandomUser } from "../../helperFunctions/axiosHelper";
 
 const UserInfoContainer = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -18,8 +18,8 @@ const UserInfoContainer = () => {
   };
 
   return (
-    <div className={styles["UserInfo-Container"]}>
-      <div className={styles["UserInfo-DisplayContainer"]}>
+    <div className={apiAssignmentStyles.UserInfoContainer}>
+      <div className={apiAssignmentStyles.UserInfoDisplayContainer}>
         <div>
           <pre>
             <p>{convertJsonToString(userInfo)}</p>

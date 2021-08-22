@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../styles/pageStyles.module.css";
+import { pageStyles } from "../../styles/styles";
 
 const BasicPageContainer = ({ children, ...props }) => {
   return (
-    <section className={styles["BasicPage-MainContainer"]}>{children}</section>
+    <section className={pageStyles.BasicPageMainContainer}>{children}</section>
   );
 };
 

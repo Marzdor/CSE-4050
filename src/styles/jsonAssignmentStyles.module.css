@@ -1,4 +1,4 @@
-.JsonString-Container {
+.JsonStringContainer {
   border-radius: 4px;
   background-color: var(--Info);
   height: 300px;
@@ -10,13 +10,13 @@
   justify-content: space-around;
 }
 
-.JsonString-DisplayContainer {
+.JsonStringDisplayContainer {
   width: 80%;
   height: 90%;
   border: 1px solid var(--Accent-Light);
   overflow-y: auto;
 }
 
-.JsonString-ButtonContainer {
+.JsonStringButtonContainer {
   display: flex;
 }
