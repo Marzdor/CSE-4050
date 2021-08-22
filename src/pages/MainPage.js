@@ -23,8 +23,8 @@ const MainPage = () => {
       </h1>
       <div>
         <BasicButton
+          buttonStyle={buttonStyles.PRIMARY}
           onClick={openGithubNewTab}
-          style={buttonStyles.PRIMARY}
           text="Github Link"
         />
       </div>
