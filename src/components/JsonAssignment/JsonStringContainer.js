@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import {
   generateRandomJsonString,
   parseJsonString,
-} from "../../helperFunctions/JsonHelper";
+} from "../../helperFunctions/jsonHelper";
 
 import BasicButton from "../BasicButton";
 import buttonStyles from "../../enums/buttonStyles";
+import { jsonAssignmentStyles } from "../../styles/styles";
 import { saveAs } from "file-saver";
-import styles from "../../styles/jsonAssignmentStyles.module.css";
 
 const JsonStringContainer = () => {
   const [jsonString, setJsonString] = useState("");
@@ -30,11 +30,11 @@ const JsonStringContainer = () => {
   };
 
   return (
-    <div className={styles["JsonString-Container"]}>
-      <div className={styles["JsonString-DisplayContainer"]}>
+    <div className={jsonAssignmentStyles.JsonStringContainer}>
+      <div className={jsonAssignmentStyles.JsonStringDisplayContainer}>
         <p>{jsonString}</p>
       </div>
-      <div className={styles["JsonString-ButtonContainer"]}>
+      <div className={jsonAssignmentStyles.JsonStringButtonContainer}>
         <BasicButton
           text="Generate Json String"
           onClick={getJsonString}
@@ -47,7 +47,7 @@ const JsonStringContainer = () => {
           disabled={jsonString === ""}
         />
       </div>
-      <div className={styles["JsonString-ButtonContainer"]}>
+      <div className={jsonAssignmentStyles.JsonStringButtonContainer}>
         <BasicButton
           text="Save Raw String"
           onClick={saveJsonString}

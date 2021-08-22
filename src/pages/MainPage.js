@@ -2,8 +2,8 @@ import BasicButton from "../components/BasicButton";
 import BasicPageContainer from "./common/BasicPageContainer";
 import React from "react";
 import buttonStyles from "../enums/buttonStyles";
+import { pageStyles } from "../styles/styles";
 import routeNames from "../enums/routeNames";
-import styles from "../styles/pageStyles.module.css";
 import { useHistory } from "react-router-dom";
 
 const MainPage = () => {
@@ -22,10 +22,10 @@ const MainPage = () => {
 
   return (
     <BasicPageContainer>
-      <h1 className={styles["Page-Title"]}>
+      <h1 className={pageStyles.PageTitle}>
         CSE 4050 Web Application Development
       </h1>
-      <div className={styles["MainPage-ButtonContainer"]}>
+      <div className={pageStyles.MainPageButtonContainer}>
         <BasicButton
           buttonStyle={buttonStyles.PRIMARY}
           onClick={openGithubNewTab}

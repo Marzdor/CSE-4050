@@ -1,4 +1,4 @@
-.BasicPage-MainContainer {
+.BasicPageMainContainer {
   align-items: center;
   background-color: var(--Shade-Dark);
   display: flex;
@@ -8,12 +8,12 @@
   width: 100vw;
 }
 
-.MainPage-ButtonContainer {
+.MainPageButtonContainer {
   display: flex;
   flex-wrap: wrap;
 }
 
-.Page-Title {
+.PageTitle {
   color: #ffffff;
   font-size: 2rem;
 }

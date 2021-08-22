@@ -1,4 +1,4 @@
-.UserInfo-Container {
+.UserInfoContainer {
   border-radius: 4px;
   background-color: var(--Info);
   height: 800px;
@@ -10,7 +10,7 @@
   justify-content: space-around;
 }
 
-.UserInfo-DisplayContainer {
+.UserInfoDisplayContainer {
   width: 80%;
   height: 90%;
   border: 1px solid var(--Accent-Light);
