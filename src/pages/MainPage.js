@@ -33,7 +33,7 @@ const MainPage = () => {
         />
         <BasicButton
           onClick={() => history.push(routeNames.JSON_ASSIGNMENT)}
-          style={buttonStyles.PRIMARY}
+          buttonStyle={buttonStyles.PRIMARY}
           text="Json Assignment"
         />
       </div>
