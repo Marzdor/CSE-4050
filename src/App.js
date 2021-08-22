@@ -1,10 +1,7 @@
+import MainRouter from "./routing/MainRouter";
 
 function App() {
-  return (
-    <div >
-     <p>Placeholder</p>
-    </div>
-  );
+  return <MainRouter />;
 }
 
 export default App;
