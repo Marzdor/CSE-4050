@@ -8,7 +8,7 @@ import routeNames from "../enums/routeNames";
 const MainRouter = () => {
   return (
     <Router>
-      <Switch>
+      <Switch basename="/CSE-4050/">
         <Route exact path="/">
           <MainPage />
         </Route>
