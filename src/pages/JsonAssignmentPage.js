@@ -7,6 +7,7 @@ const JsonAssignmentPage = () => {
   return (
     <BasicPageContainer>
       <h1 className={styles["Page-Title"]}>Api Assignment Page </h1>
+      <JsonStringContainer />
     </BasicPageContainer>
   );
 };
