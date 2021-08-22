@@ -23,3 +23,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  color: var(--Shade--Light);
+  font-size: 0.875rem;
+}
