@@ -1,5 +1,5 @@
 const routeNames = {
-  JSON_ASSIGNMENT: "JSON_ASSIGNMENT",
+  API_ASSIGNMENT: "API_ASSIGNMENT",
 };
 
 export default routeNames;

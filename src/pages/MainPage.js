@@ -32,9 +32,9 @@ const MainPage = () => {
           text="Github Link"
         />
         <BasicButton
-          onClick={() => history.push(routeNames.JSON_ASSIGNMENT)}
+          onClick={() => history.push(routeNames.API_ASSIGNMENT)}
           buttonStyle={buttonStyles.PRIMARY}
-          text="Json Assignment"
+          text="Api Assignment"
         />
       </div>
     </BasicPageContainer>

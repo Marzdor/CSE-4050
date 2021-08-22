@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
-import JsonAssignmentPage from "../pages/JsonAssignmentPage";
+import ApiAssignmentPage from "../pages/ApiAssignmentPage";
 import MainPage from "../pages/MainPage";
 import React from "react";
 import routeNames from "../enums/routeNames";
@@ -12,8 +12,8 @@ const MainRouter = () => {
         <Route exact path="/">
           <MainPage />
         </Route>
-        <Route exact path={`/${routeNames.JSON_ASSIGNMENT}`}>
-          <JsonAssignmentPage />
+        <Route exact path={`/${routeNames.API_ASSIGNMENT}`}>
+          <ApiAssignmentPage />
         </Route>
       </Switch>
     </Router>

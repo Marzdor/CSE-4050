@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import BasicButton from "../BasicButton";
 import buttonStyles from "../../enums/buttonStyles";
 import { fetchRandomUser } from "../../helperFunctions/AxiosHelper";
-import styles from "../../styles/jsonAssignmentStyles.module.css";
+import styles from "../../styles/apiAssignmentStyles.module.css";
 
 const UserInfoContainer = () => {
   const [userInfo, setUserInfo] = useState({});
