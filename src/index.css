@@ -4,7 +4,7 @@
   --Danger: #f44336;
   --Info: #181921;
   --Primary: #d37097;
-  --Shade--Light: #eff5ef;
+  --Shade-Light: #eff5ef;
   --Shade-Dark: #2c2e40;
   --Success: #759c65;
   --Warning: #f28c2d;
@@ -25,6 +25,6 @@ code {
 }
 
 p {
-  color: var(--Shade--Light);
+  color: var(--Shade-Light);
   font-size: 0.875rem;
 }
