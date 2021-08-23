@@ -1,0 +1,54 @@
+.MainContainer {
+  background-color: #999999;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 6px 15px;
+  position: relative;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform;
+}
+
+.Control {
+  background-color: #999999 !important;
+  border: none !important;
+}
+
+.Menu {
+  background-color: var(--Shade-Light) !important;
+  border: none !important;
+}
+
+.Placeholder {
+  background-color: #999999;
+  color: var(--Shade-Light);
+}
+
+.ArrowClosed {
+  border-color: var(--Shade-Light) transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: " ";
+  display: block;
+  height: 0;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
+
+.ArrowOpen {
+  border-color: transparent transparent var(--Shade-Light);
+  border-style: solid;
+  border-width: 0 5px 5px;
+  content: " ";
+  display: block;
+  height: 0;
+  margin-top: -ceil(2.5);
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  width: 0;
+}
