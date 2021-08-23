@@ -34,6 +34,16 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     })
     .addCase(synthActions.SET_WAVE_FORM, (state, action) => {
       state.settings.waveForm = action.waveForm;
+    })
+    .addCase(synthActions.PLAY, (state, action) => {
+      state.state.isPlaying = true;
+    })
+    .addCase(synthActions.STOP, (state, action) => {
+      state.state.isPlaying = false;
+    })
+    .addCase(synthActions.DELETE_OSCILLATOR, (state, action) => {
+      delete state.oscillator;
+      state.oscillator = null;
     });
 });
 
