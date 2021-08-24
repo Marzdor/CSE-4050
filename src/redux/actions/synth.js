@@ -31,6 +31,12 @@ export const setWaveForm = (waveForm) => (dispatch, getState) => {
   }
 };
 
+export const changeMasterVolume = (value) => (dispatch, getState) => {
+  dispatch({ type: synthActions.SET_MASTER_VOLUME, value });
+  const masterVolume = getState().synth.masterVolume;
+  masterVolume.gain.value = value / 100;
+};
+
 const createAudioManager = () => async (dispatch, getState) => {
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const context = new AudioContext();

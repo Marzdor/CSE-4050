@@ -1,3 +1,4 @@
+import MasterVolume from "./controls/MasterVolume";
 import Play from "./controls/Play";
 import React from "react";
 import Stop from "./controls/Stop";
@@ -6,12 +7,16 @@ import { synthStyles } from "../../styles/styles";
 
 const SynthContainer = () => {
   return (
-    <div className={synthStyles.SynthMainContainer}>
-      <div style={{ width: "30%" }}>
-        <Play />
-        <Stop />
+    <div className={synthStyles.MainContainer}>
+      <div>
+        <div className={synthStyles.PlayStopContainer}>
+          <Play />
+          <Stop />
+        </div>
         <WaveFormSelector />
       </div>
+
+      <MasterVolume />
     </div>
   );
 };

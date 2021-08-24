@@ -4,3 +4,4 @@ export { default as jsonAssignmentStyles } from "./jsonAssignmentStyles.module.c
 export { default as pageStyles } from "./pageStyles.module.css";
 export { default as synthStyles } from "./synthStyles.module.css";
 export { default as dropDownSelectorStyles } from "./dropDownSelectorStyles.module.css";
+export { default as sliderStyles } from "./sliderStyles.module.css";

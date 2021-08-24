@@ -3,6 +3,7 @@ import { synthActions } from "../actions/typeConstants";
 
 const defaultSettings = {
   waveForm: null,
+  masterVolume: 10,
 };
 
 const defaultState = {
@@ -44,6 +45,9 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     .addCase(synthActions.DELETE_OSCILLATOR, (state, action) => {
       delete state.oscillator;
       state.oscillator = null;
+    })
+    .addCase(synthActions.SET_MASTER_VOLUME, (state, action) => {
+      state.settings.masterVolume = action.value;
     });
 });
 

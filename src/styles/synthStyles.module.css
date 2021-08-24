@@ -1,6 +1,15 @@
-.SynthMainContainer {
+.MainContainer {
   width: 800px;
   height: 600px;
   border: 2px solid var(--Shade-Light);
   background-color: var(--Info);
+  padding: 5;
+  display: flex;
+  align-items: center;
+}
+
+.PlayStopContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
