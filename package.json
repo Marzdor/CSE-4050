@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "homepage": "https://marzdor.github.io/CSE-4050/",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
