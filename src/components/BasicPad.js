@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import React from "react";
-import { basicPadStyles } from "../styles/styles";
 import { getBasicPadStyle } from "../helperFunctions/basicPadHelper";
 import { playSoundOnce } from "../redux/actions/synth";
 
