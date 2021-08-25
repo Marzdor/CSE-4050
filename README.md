@@ -1,4 +1,6 @@
-# Website for CSE 4050 
+# Website for CSE 4050  
+
+Site Link: https://marzdor.github.io/CSE-4050/#/
 
 This repo containes all of the class work for the class.
 
