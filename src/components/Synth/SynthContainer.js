@@ -8,6 +8,7 @@ import Pads from "./controls/Pads.";
 import Play from "./controls/Play";
 import PlayOnce from "./controls/PlayOnce";
 import React from "react";
+import Release from "./controls/Release";
 import Stop from "./controls/Stop";
 import Sustain from "./controls/Sustain";
 import VibratoAmount from "./controls/VibratoAmount";
@@ -28,6 +29,7 @@ const SynthContainer = () => {
       <div className={synthStyles.ControlContainer}>
         <Attack />
         <Sustain />
+        <Release />
         <NoteLength />
 
         <VibratoAmount />

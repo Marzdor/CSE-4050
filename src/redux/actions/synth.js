@@ -58,7 +58,9 @@ export const changeFeedback = (value) => (dispatch, getState) => {
 
 export const changeAttackValue = (value) => ({
   type: synthActions.SET_ATTACK_VALUE,
-  value: percentToDecimal(value),
+export const changeReleaseValue = (value) => ({
+  type: synthActions.SET_RELEASE_TIME,
+  value,
 });
 
 export const changeSustainLevel = (value) => ({

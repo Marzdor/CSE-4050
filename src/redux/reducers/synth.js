@@ -64,6 +64,9 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     .addCase(synthActions.SET_ATTACK_VALUE, (state, action) => {
       state.settings.attackTime = action.value;
     })
+    .addCase(synthActions.SET_RELEASE_TIME, (state, action) => {
+      state.settings.releaseTime = action.value;
+    })
     .addCase(synthActions.SET_SUSTAIN_LEVEL, (state, action) => {
       state.settings.sustainLevel = action.value;
     })
