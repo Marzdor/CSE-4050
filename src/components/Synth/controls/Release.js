@@ -6,11 +6,11 @@ import { changeReleaseValue } from "../../../redux/actions/synth";
 
 const Release = () => {
   const dispatch = useDispatch();
-  const release = useSelector((state) => state.synth.settings.release);
+  const releaseTime = useSelector((state) => state.synth.settings.releaseTime);
 
   return (
     <BasicSlider
-      value={release}
+      value={releaseTime}
       range={{ min: 0, max: 0.5 }}
       step={0.02}
       label="Release"

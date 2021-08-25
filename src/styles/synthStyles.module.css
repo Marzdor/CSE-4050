@@ -17,7 +17,7 @@
   max-height: 200px;
   height: 100%;
   align-content: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .PadContainer {
