@@ -20,11 +20,6 @@ const SynthContainer = () => {
     <div className={synthStyles.MainContainer}>
       <div className={synthStyles.ControlContainer}>
         <div>
-          <div className={synthStyles.PlayStopContainer}>
-            <Play />
-            <Stop />
-            <PlayOnce />
-          </div>
           <WaveFormSelector />
         </div>
 
