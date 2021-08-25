@@ -2,11 +2,17 @@ import { createReducer } from "@reduxjs/toolkit";
 import { synthActions } from "../actions/typeConstants";
 
 const defaultSettings = {
-  waveForm: null,
-  masterVolume: 10,
   attackTime: 0.3,
-  sustainLevel: 0.8,
+  delayAmountGain: 0,
+  delayTime: 0,
+  feedback: 0,
+  masterVolume: 10,
+  noteLength: 0,
   releaseTime: 0.3,
+  sustainLevel: 0.8,
+  vibratoAmount: 0.5,
+  vibratoTime: 10,
+  waveForm: null,
 };
 
 const defaultState = {
@@ -14,6 +20,9 @@ const defaultState = {
 };
 
 const defaultReducerState = {
+  delay: null,
+  delayAmountGain: null,
+  feedback: null,
   manager: null,
   masterVolume: null,
   oscillator: null,
@@ -57,6 +66,29 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     })
     .addCase(synthActions.SET_SUSTAIN_LEVEL, (state, action) => {
       state.settings.sustainLevel = action.value;
+    })
+    .addCase(synthActions.SET_DELAY_MANAGERS, (state, action) => {
+      state.delay = action.managers.delay;
+      state.feedback = action.managers.feedback;
+      state.delayAmountGain = action.managers.delayAmountGain;
+    })
+    .addCase(synthActions.SET_NOTE_LENGTH, (state, action) => {
+      state.settings.noteLength = action.value;
+    })
+    .addCase(synthActions.SET_VIBRATO_AMOUNT, (state, action) => {
+      state.settings.vibratoAmount = action.value;
+    })
+    .addCase(synthActions.SET_VIBRATO_TIME, (state, action) => {
+      state.settings.vibratoTime = action.value;
+    })
+    .addCase(synthActions.SET_DELAY_AMOUNT, (state, action) => {
+      state.settings.delayAmountGain = action.value;
+    })
+    .addCase(synthActions.SET_DELAY_TIME, (state, action) => {
+      state.settings.delayTime = action.value;
+    })
+    .addCase(synthActions.SET_FEEDBACK, (state, action) => {
+      state.settings.feedback = action.value;
     });
 });
 
