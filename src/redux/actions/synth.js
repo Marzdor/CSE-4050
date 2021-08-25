@@ -125,7 +125,7 @@ const createOscillator = () => async (dispatch, getState) => {
   }
 };
 
-export const playSoundOnce = () => (dispatch, getState) => {
+export const playSoundOnce = (noteValue) => (dispatch, getState) => {
   const audioManager = getState().synth.manager;
   const masterVolume = getState().synth.masterVolume;
   const settings = getState().synth.settings;
@@ -161,7 +161,7 @@ export const playSoundOnce = () => (dispatch, getState) => {
   lfo.connect(lfoGain);
 
   osc.type = settings.waveForm;
-  osc.frequency.setValueAtTime(220, 0);
+  osc.frequency.setValueAtTime(noteValue, 0);
   osc.start(0);
   osc.stop(audioManager.currentTime + settings.noteLength);
   osc.connect(noteGain);

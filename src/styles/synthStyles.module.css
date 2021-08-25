@@ -19,3 +19,7 @@
   align-content: center;
   justify-content: center;
 }
+
+.PadContainer {
+  display: flex;
+}
