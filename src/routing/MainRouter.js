@@ -4,6 +4,7 @@ import ApiAssignmentPage from "../pages/ApiAssignmentPage";
 import JsonAssignmentPage from "../pages/JsonAssignmentPage";
 import MainPage from "../pages/MainPage";
 import React from "react";
+import SynthPage from "../pages/SynthPage";
 import routeNames from "../enums/routeNames";
 
 const MainRouter = () => {
@@ -18,6 +19,9 @@ const MainRouter = () => {
         </Route>
         <Route exact path={`/${routeNames.API_ASSIGNMENT}`}>
           <ApiAssignmentPage />
+        </Route>
+        <Route exact path={`/${routeNames.SYNTH}`}>
+          <SynthPage />
         </Route>
       </Switch>
     </Router>
