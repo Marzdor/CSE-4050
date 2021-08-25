@@ -1,6 +1,7 @@
 import Attack from "./controls/Attack";
 import MasterVolume from "./controls/MasterVolume";
 import Play from "./controls/Play";
+import PlayOnce from "./controls/PlayOnce";
 import React from "react";
 import Stop from "./controls/Stop";
 import Sustain from "./controls/Sustain";
@@ -14,6 +15,7 @@ const SynthContainer = () => {
         <div className={synthStyles.PlayStopContainer}>
           <Play />
           <Stop />
+          <PlayOnce />
         </div>
         <WaveFormSelector />
       </div>

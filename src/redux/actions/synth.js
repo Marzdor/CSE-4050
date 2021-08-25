@@ -1,3 +1,4 @@
+import { percentToDecimal } from "../../helperFunctions/mathHelper";
 import { synthActions } from "./typeConstants";
 
 export const initSynth = () => async (dispatch, getState) => {
@@ -70,4 +71,33 @@ const createOscillator = () => async (dispatch, getState) => {
 
     dispatch({ type: synthActions.CREATE_OSCILLATOR, oscillator });
   }
+};
+
+export const playSoundOnce = () => (dispatch, getState) => {
+  const audioManager = getState().synth.manager;
+  const masterVolume = getState().synth.masterVolume;
+  const settings = getState().synth.settings;
+
+  const oscillator = audioManager.createOscillator();
+  const noteGain = audioManager.createGain();
+
+  noteGain.gain.setValueAtTime(0, 0);
+
+  noteGain.gain.linearRampToValueAtTime(
+    settings.sustainLevel,
+    audioManager.currentTime + settings.attackTime
+  );
+
+  noteGain.gain.setValueAtTime(
+    settings.sustainLevel,
+    audioManager.currentTime + 1 - settings.releaseTime
+  );
+  noteGain.gain.linearRampToValueAtTime(0, audioManager.currentTime + 1);
+
+  oscillator.type = settings.waveForm;
+  oscillator.frequency.setValueAtTime(220, 0);
+  oscillator.start(0);
+  oscillator.stop(audioManager.currentTime + 1);
+  oscillator.connect(noteGain);
+  noteGain.connect(masterVolume);
 };
