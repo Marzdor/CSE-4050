@@ -13,6 +13,8 @@ const VibratoAmount = () => {
   return (
     <BasicSlider
       value={vibratoAmount}
+      range={{ min: 0, max: 5 }}
+      step={0.5}
       label="Vibrato Amount"
       onChange={(value) => dispatch(changeVibratoAmount(value))}
     />

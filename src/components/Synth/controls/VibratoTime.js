@@ -11,6 +11,8 @@ const VibratoTime = () => {
   return (
     <BasicSlider
       value={vibratoTime}
+      range={{ min: 0, max: 30 }}
+      step={0.5}
       label="Vibrato Time"
       onChange={(value) => dispatch(changeVibratoTime(value))}
     />

@@ -11,6 +11,8 @@ const DelayFeedback = () => {
   return (
     <BasicSlider
       value={feedback}
+      range={{ min: 0, max: 0.9 }}
+      step={0.05}
       label="Delay Feedback"
       onChange={(value) => dispatch(changeFeedback(value))}
     />

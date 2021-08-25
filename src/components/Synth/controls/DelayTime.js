@@ -11,6 +11,8 @@ const DelayTime = () => {
   return (
     <BasicSlider
       value={delayTime}
+      range={{ min: 0, max: 1 }}
+      step={0.05}
       label="Delay Time"
       onChange={(value) => dispatch(changeDelayTime(value))}
     />

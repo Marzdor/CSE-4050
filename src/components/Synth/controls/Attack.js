@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import BasicSlider from "../../BasicSlider";
 import React from "react";
 import { changeAttackValue } from "../../../redux/actions/synth";
-import { decimalToPercent } from "../../../helperFunctions/mathHelper";
 
 const Attack = () => {
   const dispatch = useDispatch();
@@ -11,7 +10,9 @@ const Attack = () => {
 
   return (
     <BasicSlider
-      value={decimalToPercent(attackTime)}
+      value={attackTime}
+      range={{ min: 0, max: 0.5 }}
+      step={0.02}
       label="Attack"
       onChange={(value) => dispatch(changeAttackValue(value))}
     />

@@ -7,11 +7,11 @@ const defaultSettings = {
   delayTime: 0,
   feedback: 0,
   masterVolume: 10,
-  noteLength: 0,
+  noteLength: 1,
   releaseTime: 0.3,
   sustainLevel: 0.8,
-  vibratoAmount: 0.5,
-  vibratoTime: 10,
+  vibratoAmount: 0,
+  vibratoTime: 0,
   waveForm: null,
 };
 
