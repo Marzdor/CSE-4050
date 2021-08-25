@@ -34,8 +34,18 @@ export const setWaveForm = (waveForm) => (dispatch, getState) => {
 export const changeMasterVolume = (value) => (dispatch, getState) => {
   dispatch({ type: synthActions.SET_MASTER_VOLUME, value });
   const masterVolume = getState().synth.masterVolume;
-  masterVolume.gain.value = value / 100;
+  masterVolume.gain.value = percentToDecimal(value);
 };
+
+export const changeAttackValue = (value) => ({
+  type: synthActions.SET_ATTACK_VALUE,
+  value: percentToDecimal(value),
+});
+
+export const changeSustainLevel = (value) => ({
+  type: synthActions.SET_SUSTAIN_LEVEL,
+  value: percentToDecimal(value),
+});
 
 const createAudioManager = () => async (dispatch, getState) => {
   const AudioContext = window.AudioContext || window.webkitAudioContext;

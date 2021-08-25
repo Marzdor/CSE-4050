@@ -4,6 +4,9 @@ import { synthActions } from "../actions/typeConstants";
 const defaultSettings = {
   waveForm: null,
   masterVolume: 10,
+  attackTime: 0.3,
+  sustainLevel: 0.8,
+  releaseTime: 0.3,
 };
 
 const defaultState = {
@@ -48,6 +51,12 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     })
     .addCase(synthActions.SET_MASTER_VOLUME, (state, action) => {
       state.settings.masterVolume = action.value;
+    })
+    .addCase(synthActions.SET_ATTACK_VALUE, (state, action) => {
+      state.settings.attackTime = action.value;
+    })
+    .addCase(synthActions.SET_SUSTAIN_LEVEL, (state, action) => {
+      state.settings.sustainLevel = action.value;
     });
 });
 
