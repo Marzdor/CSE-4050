@@ -1,0 +1,38 @@
+.BasicPad {
+  background-color: #999999;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 5px;
+  padding: 6px 15px;
+  position: relative;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: box-shadow, transform;
+  width: 50px;
+  height: 50px;
+}
+
+.BasicPad:hover {
+  background-color: #00000000;
+  padding: 4px 13px;
+  border: 2px solid #999999;
+}
+
+.BasicPad:active {
+  padding: 2px 11px;
+}
+
+.BasicPadDisabled {
+  background-color: #999999 !important;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.BasicPadDisabled:hover {
+  padding: 6px 15px !important;
+  border: none !important;
+}
+
+.BasicPadDisabled:active {
+  padding: 6px 15px;
+}

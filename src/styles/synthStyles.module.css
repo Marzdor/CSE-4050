@@ -1,0 +1,25 @@
+.MainContainer {
+  width: 800px;
+  height: 600px;
+  border: 2px solid var(--Shade-Light);
+  background-color: var(--Info);
+  padding: 5;
+}
+
+.PlayStopContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ControlContainer {
+  display: flex;
+  max-height: 200px;
+  height: 100%;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.PadContainer {
+  display: flex;
+}

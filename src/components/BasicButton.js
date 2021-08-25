@@ -1,5 +1,5 @@
 import React from "react";
-import { buttonStyles } from "../styles/styles";
+import { basicButtonStyles } from "../styles/styles";
 import { getButtonStyle } from "../helperFunctions/basicButtonHelper";
 
 const BasicButton = ({
@@ -16,7 +16,7 @@ const BasicButton = ({
       style={style}
       onClick={!disabled ? onClick : null}
     >
-      <p className={buttonStyles.BasicButtonText}>{text}</p>
+      <p className={basicButtonStyles.BasicButtonText}>{text}</p>
     </div>
   );
 };

@@ -41,6 +41,11 @@ const MainPage = () => {
           buttonStyle={buttonStyles.PRIMARY}
           text="Api Assignment"
         />
+        <BasicButton
+          onClick={() => history.push(routeNames.SYNTH)}
+          buttonStyle={buttonStyles.PRIMARY}
+          text="Synth"
+        />
       </div>
     </BasicPageContainer>
   );
