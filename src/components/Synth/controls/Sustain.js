@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import BasicSlider from "../../BasicSlider";
 import React from "react";
 import { changeSustainLevel } from "../../../redux/actions/synth";
-import { decimalToPercent } from "../../../helperFunctions/mathHelper";
 
 const Sustain = () => {
   const dispatch = useDispatch();
@@ -13,7 +12,9 @@ const Sustain = () => {
 
   return (
     <BasicSlider
-      value={decimalToPercent(sustainLevel)}
+      value={sustainLevel}
+      range={{ min: 0, max: 0.5 }}
+      step={0.02}
       label="Sustain"
       onChange={(value) => dispatch(changeSustainLevel(value))}
     />
