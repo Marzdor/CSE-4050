@@ -4,7 +4,7 @@ import DelayFeedback from "./controls/DelayFeedback";
 import DelayTime from "./controls/DelayTime";
 import MasterVolume from "./controls/MasterVolume";
 import NoteLength from "./controls/NoteLength";
-import Pads from "./controls/Pads.";
+import Pads from "./controls/Pads";
 import React from "react";
 import Release from "./controls/Release";
 import Sustain from "./controls/Sustain";
