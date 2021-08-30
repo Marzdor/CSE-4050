@@ -16,10 +16,8 @@ import { synthStyles } from "../../styles/styles";
 const SynthContainer = () => {
   return (
     <div className={synthStyles.MainContainer}>
-      <div className={synthStyles.ControlContainer}>
-        <div>
-          <WaveFormSelector />
-        </div>
+      <div>
+        <WaveFormSelector />
 
         <MasterVolume />
       </div>
@@ -28,10 +26,12 @@ const SynthContainer = () => {
         <Sustain />
         <Release />
         <NoteLength />
-
+      </div>
+      <div className={synthStyles.ControlContainer}>
         <VibratoAmount />
         <VibratoTime />
-
+      </div>
+      <div className={synthStyles.ControlContainer}>
         <DelayTime />
         <DelayAmount />
         <DelayFeedback />
