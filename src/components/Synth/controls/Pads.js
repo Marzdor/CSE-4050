@@ -3,26 +3,33 @@ import React from "react";
 import { synthStyles } from "../../../styles/styles";
 
 const Pads = () => {
-  const notes = {
-    C4: 261.63,
-    Db4: 277.18,
-    D4: 293.66,
-    Eb4: 311.13,
-    E4: 329.63,
-    F4: 349.23,
-    Gb4: 369.99,
-    G4: 392.0,
-    Ab4: 415.3,
-    A4: 440,
-    Bb4: 466.16,
-    B4: 493.88,
-    C5: 523.25,
-  };
+  const notes = [
+    { note: "C", octave: 4, value: 261.63 },
+    { note: "C#", octave: 4, value: 277.18 },
+    { note: "D", octave: 4, value: 293.66 },
+    { note: "D#", octave: 4, value: 311.13 },
+    { note: "E", octave: 4, value: 329.63 },
+    { note: "F", octave: 4, value: 349.23 },
+    { note: "F#", octave: 4, value: 369.99 },
+    { note: "G", octave: 4, value: 392.0 },
+    { note: "G#", octave: 4, value: 415.3 },
+    { note: "A", octave: 4, value: 440 },
+    { note: "A#", octave: 4, value: 466.16 },
+    { note: "B", octave: 4, value: 493.88 },
+    { note: "C", octave: 5, value: 523.25 },
+  ];
+
   return (
     <div className={synthStyles.PadContainer}>
-      {Object.entries(notes).map((note) => (
-        <BasicPad key={note[0]} label={note[0]} noteValue={note[1]} />
-      ))}
+      {notes.map((note) => {
+        return (
+          <BasicPad
+            key={`${note.note}${note.octave}`}
+            label={`${note.note}${note.octave}`}
+            noteValue={note.value}
+          />
+        );
+      })}
     </div>
   );
 };

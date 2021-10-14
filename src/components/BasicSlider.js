@@ -14,16 +14,18 @@ const BasicSlider = ({
 } = {}) => {
   return (
     <div className={sliderStyles.MainContainer}>
+      <div style={{ margin: "10px 0", display: "flex" }}>
+        <p style={{ margin: "0 10px 0 0" }}>{label}</p>
+        <p style={{ margin: 0 }}>{value}</p>
+      </div>
       <Slider
-        vertical
+        // vertical
         min={range.min}
         max={range.max}
         step={step}
         value={value}
         onChange={onChange}
       />
-      <p>{value}</p>
-      <p>{label}</p>
     </div>
   );
 };

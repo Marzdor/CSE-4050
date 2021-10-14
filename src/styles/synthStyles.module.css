@@ -13,11 +13,9 @@
 }
 
 .ControlContainer {
-  display: flex;
-  max-height: 200px;
-  height: 100%;
-  align-content: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px 0 20px 0;
 }
 
 .PadContainer {
