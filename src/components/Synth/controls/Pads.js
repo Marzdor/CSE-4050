@@ -24,7 +24,7 @@ const Pads = () => {
       {notes.map((note) => {
         return (
           <BasicPad
-            key={note.note}
+            key={`${note.note}${note.octave}`}
             label={`${note.note}${note.octave}`}
             noteValue={note.value}
           />

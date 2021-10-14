@@ -174,3 +174,16 @@ export const playSoundOnce = (noteValue) => (dispatch, getState) => {
   noteGain.connect(masterVolume);
   noteGain.connect(delay);
 };
+
+export const playPattern = (pattern) => (dispatch, getState) => {
+  console.log("pattern ", pattern);
+  pattern.forEach((note, index) => {
+    console.log("note ", note);
+    setTimeout(() => {
+      const haveANote = Object.entries(note).length;
+      if (haveANote) {
+        dispatch(playSoundOnce(note.value));
+      }
+    }, index * 1000);
+  });
+};
