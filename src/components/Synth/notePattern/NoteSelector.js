@@ -33,18 +33,17 @@ const NoteSelector = ({ selectedNote, setNote, deleteNote, index }) => {
         value={selectedNote}
         placeholder="Select"
       />
-      <button
+      <div
         style={{
           color: "red",
-          border: "1px solid red",
           padding: 5,
           marginLeft: 5,
-          height: 30,
+          cursor: "pointer",
         }}
         onClick={() => deleteNote({ index })}
       >
         X
-      </button>
+      </div>
     </div>
   );
 };
