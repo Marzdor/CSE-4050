@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import AddNote from "./AddNote";
 import NoteSelector from "./NoteSelector";
+import { parseJsonString } from "../../../helperFunctions/jsonHelper";
 import { playPattern } from "../../../redux/actions/synth";
+import { saveAs } from "file-saver";
 import { synthStyles } from "../../../styles/styles";
 import { useDispatch } from "react-redux";
 
@@ -27,6 +29,30 @@ const NotePattern = () => {
     setNotes(newNotes);
   };
 
+  const exportPattern = () => {
+    const jsonObj = parseJsonString(JSON.stringify({ pattern: notes }));
+    const blob = new Blob([jsonObj], { type: "json;charset=utf-8" });
+    saveAs(blob, "Pattern.zPat");
+  };
+
+  const importPattern = (event) => {
+    const fileList = event.target.files;
+    const file = fileList[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsText(file, "UTF-8");
+
+      reader.onload = function (evt) {
+        const data = JSON.parse(evt.target.result);
+        setNotes(data.pattern);
+      };
+      reader.onerror = function (evt) {
+        console.log("error");
+      };
+    }
+  };
+
   return notes.length ? (
     <div>
       <div
@@ -36,6 +62,8 @@ const NotePattern = () => {
         <button onClick={() => dispatch(playPattern(notes))}>
           play pattern
         </button>
+        <button onClick={exportPattern}>export pattern</button>
+        <input type="file" accept=".zPat" onChange={importPattern} />
       </div>
       <div
         className={synthStyles.MainContainer}
