@@ -9,15 +9,10 @@ import { useDispatch } from "react-redux";
 const NotePattern = () => {
   const dispatch = useDispatch();
   const [notes, setNotes] = useState([]);
-  const [containerHeight, setContainerHeight] = useState(50);
 
   const addEmptyNote = () => {
     const newNotes = [...notes, ""];
     setNotes(newNotes);
-
-    if ((newNotes.length + 1) % 4 === 0) {
-      setContainerHeight(containerHeight + 40);
-    }
   };
 
   const setNote = ({ selected, index }) => {
@@ -45,12 +40,13 @@ const NotePattern = () => {
       <div
         className={synthStyles.MainContainer}
         style={{
-          height: containerHeight,
           border: "1px solid red",
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "repeat(5,1fr)",
           overflowY: "scroll",
-          maxHeight: 1000,
+          height: 400,
+          justifyContent: "center",
+          alignContent: "flex-start",
         }}
       >
         {notes.map((note, index) => (
