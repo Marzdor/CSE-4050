@@ -8,19 +8,27 @@ import NotePattern from "./notePattern/NotePattern";
 import Pads from "./controls/Pads";
 import React from "react";
 import Release from "./controls/Release";
+import SaveSettings from "./controls/SaveSettings";
 import Sustain from "./controls/Sustain";
 import VibratoAmount from "./controls/VibratoAmount";
 import VibratoTime from "./controls/VibratoTime";
 import WaveFormSelector from "./controls/WaveFormSelector";
 import { synthStyles } from "../../styles/styles";
+import { useSelector } from "react-redux";
 
 const SynthContainer = () => {
+  const { savedSettings } = useSelector((state) => state.synth.state);
+
   return (
     <>
       <div className={synthStyles.MainContainer}>
         <div>
+          <div style={{ display: "flex" }}>
+            {savedSettings.map((slot, index) => (
+              <SaveSettings key={`Saved slot ${index}`} index={index} />
+            ))}
+          </div>
           <WaveFormSelector />
-
           <MasterVolume />
         </div>
         <div className={synthStyles.ControlContainer}>

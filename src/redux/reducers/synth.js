@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { synthActions } from "../actions/typeConstants";
 
-const defaultSettings = {
+export const defaultSynthSettings = {
   attackTime: 0.3,
   delayAmountGain: 0,
   delayTime: 0,
@@ -17,6 +17,8 @@ const defaultSettings = {
 
 const defaultState = {
   isPlaying: false,
+  savedSettings: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+  activeSlot: 0,
 };
 
 const defaultReducerState = {
@@ -26,7 +28,7 @@ const defaultReducerState = {
   manager: null,
   masterVolume: null,
   oscillator: null,
-  settings: { ...defaultSettings },
+  settings: { ...defaultSynthSettings },
   state: { ...defaultState },
 };
 
@@ -92,6 +94,24 @@ const synthReducer = createReducer({ ...defaultReducerState }, (builder) => {
     })
     .addCase(synthActions.SET_FEEDBACK, (state, action) => {
       state.settings.feedback = action.value;
+    })
+    .addCase(synthActions.SET_SAVED_SLOT, (state, action) => {
+      const { settings, index } = action.payload;
+
+      state.state.savedSettings[index] = settings;
+    })
+    .addCase(synthActions.SELECT_SAVED_SLOT, (state, action) => {
+      state.state.activeSlot = action.payload;
+    })
+    .addCase(synthActions.SET_SETTINGS, (state, action) => {
+      const settings = action.payload;
+      const hasSavedSettings = Object.entries(settings).length;
+      console.log(action.payload);
+      if (hasSavedSettings) {
+        state.settings = settings;
+      } else {
+        state.settings = { ...defaultSynthSettings };
+      }
     });
 });
 

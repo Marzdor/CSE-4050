@@ -1,3 +1,4 @@
+import { defaultSynthSettings } from "../reducers/synth";
 import { percentToDecimal } from "../../helperFunctions/mathHelper";
 import { synthActions } from "./typeConstants";
 
@@ -6,6 +7,48 @@ export const initSynth = () => async (dispatch, getState) => {
   dispatch(createMasterVolume());
   dispatch(createDelay());
 };
+
+export const saveSettings =
+  ({ index }) =>
+  async (dispatch, getState) => {
+    const { settings } = getState().synth;
+
+    dispatch({
+      type: synthActions.SET_SAVED_SLOT,
+      payload: { settings, index },
+    });
+  };
+
+export const selectSavedSlot =
+  ({ index }) =>
+  async (dispatch, getState) => {
+    const { savedSettings } = getState().synth.state;
+    const activeSettings = savedSettings[index];
+    const hasSavedSettings = Object.entries(activeSettings).length;
+
+    dispatch({
+      type: synthActions.SELECT_SAVED_SLOT,
+      payload: index,
+    });
+    dispatch({
+      type: synthActions.SET_SETTINGS,
+      payload: activeSettings,
+    });
+
+    const settings = hasSavedSettings ? activeSettings : defaultSynthSettings;
+
+    setWaveForm(settings.waveForm);
+    changeMasterVolume(settings.masterVolume);
+    changeDelayAmount(settings.delayAmountGain);
+    changeDelayTime(settings.delayTime);
+    changeFeedback(settings.feedback);
+    changeAttackValue(settings.attackTime);
+    changeReleaseValue(settings.releaseTime);
+    changeSustainLevel(settings.sustainLevel);
+    changeNoteLength(settings.noteLength);
+    changeVibratoAmount(settings.vibratoAmount);
+    changeVibratoTime(settings.vibratoTime);
+  };
 
 export const playSound = () => (dispatch, getState) => {
   dispatch({ type: synthActions.PLAY });
